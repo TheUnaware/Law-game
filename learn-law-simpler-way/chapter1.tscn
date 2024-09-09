@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cofiymnbphh0f"]
+
+[ext_resource type="Texture2D" uid="uid://c1r4cxfpwddbu" path="res://file.png" id="1_ppc6w"]
+[ext_resource type="Script" path="res://chapter_1.gd" id="1_vcbos"]
+[ext_resource type="Texture2D" uid="uid://ctnhysxjugnlj" path="res://prosecutor.png" id="2_qrlb4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vcbos")
+
+[node name="StartStory" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_ppc6w")
+expand_mode = 1
+
+[node name="Prosecutor" type="TextureRect" parent="StartStory"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -395.0
+offset_top = -444.0
+offset_right = -145.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_qrlb4")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 600.0
+offset_right = 1240.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 2
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 1150.0
+offset_bottom = 90.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Ladies and gentlemen of the jury, we are here today to uphold the sanctity of law and order in our society. The accused, Mr. Aarav Sharma, a young journalist, stands before you charged with two grave offenses: defamation and sedition. You may wonder—what drove us to bring these charges against a man whose profession is to inform the public? Allow me to present to you the truth that lies beneath the headlines."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

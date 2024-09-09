@@ -1,0 +1,223 @@
+[gd_scene load_steps=11 format=3 uid="uid://js6u6pwnllmw"]
+
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_tdtwu"]
+[ext_resource type="Texture2D" uid="uid://c1r4cxfpwddbu" path="res://file.png" id="1_v4bra"]
+[ext_resource type="Theme" uid="uid://c8ndpwphbkoli" path="res://stylebox.tres" id="2_cy48w"]
+[ext_resource type="Script" path="res://start.gd" id="3_4iila"]
+[ext_resource type="AudioStream" uid="uid://d3h85wgl7b22c" path="res://mixkit-modern-technology-select-3124.wav" id="4_p53de"]
+[ext_resource type="Script" path="res://language.gd" id="5_migsi"]
+[ext_resource type="Script" path="res://chapters_popup.gd" id="7_w1560"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4s4ct"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6pae"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwplf"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.428356, 0.570512, 0.891934, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdtwu")
+
+[node name="ConstitutionPopup" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(900, 600)
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ConstitutionPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -275.0
+offset_right = 425.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Constitution of India
+
+Preamble:  
+We, the people of India, having solemnly resolved to constitute India into a Sovereign, Socialist, Secular, Democratic Republic and to secure to all its citizens:  
+- Justice, social, economic and political;  
+- Liberty of thought, expression, belief, faith, and worship;  
+- Equality of status and opportunity; and to promote among them all  
+- Fraternity assuring the dignity of the individual and the unity and integrity of the Nation;  
+
+In our Constituent Assembly this twenty-sixth day of November, 1949, do hereby adopt, enact and give to ourselves this Constitution.
+
+Fundamental Rights (Part III):  
+Right to Equality:  
+- Equality before the law and equal protection of the laws.  
+- Prohibition of discrimination on grounds of religion, race, caste, sex, or place of birth.  
+- Equality of opportunity in matters of public employment.  
+
+Right to Freedom:  
+- Freedom of speech and expression.  
+- Freedom to assemble peacefully and without arms.  
+- Freedom to form associations or unions.  
+- Freedom to move freely throughout the territory of India.  
+- Freedom to reside and settle in any part of India.  
+- Freedom to practice any profession, or to carry on any occupation, trade, or business.  
+
+Right against Exploitation:  
+- Prohibition of traffic in human beings and forced labor.  
+- Prohibition of employment of children in factories and other hazardous employment.  
+
+Right to Freedom of Religion:  
+- Freedom of conscience and free profession, practice, and propagation of religion.  
+- Freedom to manage religious affairs.  
+- Freedom from payment of taxes for promotion of any particular religion.  
+
+Cultural and Educational Rights:  
+- Protection of interests of minorities to preserve their culture.  
+- Right of minorities to establish and administer educational institutions.  
+
+Right to Constitutional Remedies:  
+- Right to move the Supreme Court for enforcement of Fundamental Rights.
+
+Directive Principles of State Policy (Part IV):  
+Social and Economic Welfare:  
+- The state shall promote the welfare of the people by securing a social order in which justice, social, economic, and political, shall inform all institutions of national life.  
+- Equal pay for equal work for both men and women.  
+- Protection of children and youth against exploitation and moral and material abandonment.  
+
+Right to Work, Education, and Public Assistance:  
+- The state shall provide opportunities for work and education and public assistance in cases of unemployment, old age, sickness, and disablement.  
+
+Protection and Improvement of Environment:  
+- The state shall endeavor to protect and improve the environment and to safeguard forests and wildlife.  
+
+Promotion of International Peace and Security:  
+- The state shall promote international peace and security, maintain just and honorable relations between nations, and encourage the settlement of international disputes by arbitration.
+
+Fundamental Duties (Part IV A):  
+1. To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem.  
+2. To cherish and follow the noble ideals that inspired the national struggle for freedom.  
+3. To uphold and protect the sovereignty, unity, and integrity of India.  
+4. To defend the country and render national service when called upon to do so.  
+5. To promote harmony and the spirit of common brotherhood amongst all the people of India, transcending religious, linguistic, and regional or sectional diversities.  
+6. To value and preserve the rich heritage of the country’s composite culture.  
+7. To protect and improve the natural environment including forests, lakes, rivers, and wildlife, and to have compassion for living creatures.  
+8. To develop scientific temper, humanism, and the spirit of inquiry and reform.  
+9. To safeguard public property and to abjure violence.  
+10. To strive towards excellence in all spheres of individual and collective activity so that the nation constantly rises to higher levels of endeavor and achievement.  
+11. To provide opportunities for education to children between the ages of six and fourteen years (for parents/guardians).
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_v4bra")
+expand_mode = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 370.0
+offset_right = 765.0
+offset_bottom = 420.0
+theme = ExtResource("2_cy48w")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_4s4ct")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6pae")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwplf")
+text = "Start"
+script = ExtResource("3_4iila")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Start"]
+stream = ExtResource("4_p53de")
+
+[node name="ConstitutionButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 530.0
+offset_right = 765.0
+offset_bottom = 580.0
+theme = ExtResource("2_cy48w")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_4s4ct")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6pae")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwplf")
+text = "Articles"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ConstitutionButton"]
+stream = ExtResource("4_p53de")
+
+[node name="Language" type="Button" parent="."]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 450.0
+offset_right = 765.0
+offset_bottom = 500.0
+theme = ExtResource("2_cy48w")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6pae")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwplf")
+text = "Language"
+script = ExtResource("5_migsi")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Language"]
+stream = ExtResource("4_p53de")
+
+[node name="SettingsPopup" type="PopupMenu" parent="Language"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Language/SettingsPopup"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LanguageOption" type="OptionButton" parent="Language/SettingsPopup/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "English"
+popup/item_1/text = "Hindi"
+popup/item_1/id = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p53de")
+
+[node name="ChaptersPopup" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(500, 600)
+visible = false
+script = ExtResource("7_w1560")
+
+[node name="ChaptersFlowContainer" type="FlowContainer" parent="ChaptersPopup"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[connection signal="close_requested" from="ConstitutionPopup" to="." method="_on_constitution_popup_close_requested"]
+[connection signal="pressed" from="ConstitutionButton" to="." method="_on_constitution_button_pressed"]
+[connection signal="close_requested" from="ChaptersPopup" to="." method="_on_chapters_popup_close_requested"]
